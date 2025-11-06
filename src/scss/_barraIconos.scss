@@ -1,0 +1,29 @@
+.contenedor-iconos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: grey;
+    height: 3.125rem;
+   
+}
+.contenedor-iconosSec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    height: 3.125rem;
+    width: 100%;
+    max-width: 1280px;
+    
+   
+}
+
+.tipo-visualizacion{
+    display: flex;
+ 
+    gap: 1.80rem;
+
+}
