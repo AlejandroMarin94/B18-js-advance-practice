@@ -1,3 +1,4 @@
+import { select } from "../functions/select";
 
 export function barraIconos(container) {
   const contenedorIconos = document.createElement("div");
@@ -24,14 +25,11 @@ export function barraIconos(container) {
     "/grid-layout.svg"
   );
 
-  const contenedorSelect = document.createElement("div");
-  contenedorSelect.className ="contenedor-select";
-  const selectBusqueda = document.createElement("input");
-  selectBusqueda.className ="select-busqueda";
+  const contenedorSelect = select()
+  
 
   contenedorIconosSec.appendChild(contenedorTipovisualizacion);
   contenedorIconosSec.appendChild(contenedorSelect);
-  contenedorSelect.appendChild(selectBusqueda);
   contenedorIconos.appendChild(contenedorIconosSec)
   contenedorTipovisualizacion.appendChild(iconoFiltroGrid);
   contenedorTipovisualizacion.appendChild(iconoFiltroLista);

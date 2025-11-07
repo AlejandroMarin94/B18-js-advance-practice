@@ -1,0 +1,16 @@
+import { showmovies } from "../functions/showmovies";
+
+async function getMovies(container, datalist) {
+  try {
+    const response = await fetch(
+      `${apiConfig.baseUrl}${datalist}?api_key=${apiConfig.apiKey}`
+    );
+    if (!response.ok)
+      throw new Error("No se han encontrado peliculas", response.status);
+
+    const data = await response.json();
+    showmovies(data.results, container);
+  } catch {
+    console.log("Error", error.message);
+  }
+}
