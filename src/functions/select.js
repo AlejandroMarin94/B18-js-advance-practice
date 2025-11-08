@@ -1,19 +1,37 @@
-import { moviesList } from "../api/apiconfig";
+import { moviesList } from "../api/apiconfig.js";
+import { getMovies } from "../api/apifetch.js";
 
-export function select(container){
-    const contenedorSelect = document.createElement("div");
-  contenedorSelect.className ="contenedor-select";
+export function select(){
+ 
+ 
+
   const selectBusqueda = document.createElement("select");
   selectBusqueda.className ="select-busqueda";
 
-  Object.entries(moviesList).forEach(([label,value])=>{
-    const option = document.createElement("option");
-    option.value = value;
-    option.textContent = label;
-    selectBusqueda.appendChild(option)
+  const arrayData = Object.entries(moviesList);
+  console.log(arrayData);
+  
+  arrayData.forEach((option)=>{
+    const selectOption = document.createElement("option");
+    selectOption.setAttribute("value", option[1]);
+    selectOption.textContent =option[0]
+    selectBusqueda.appendChild(selectOption)
   })
+  
+  createSelectEventistener(selectBusqueda);
+    console.log("probando");
+    
 
-  contenedorSelect.appendChild(selectBusqueda)
-  return contenedorSelect;
+    
+    return selectBusqueda;
+}
 
+  
+
+function createSelectEventistener(select){
+    select.addEventListener("change", (e)=>{
+        const selectList = e.target.value;
+        const container = document.querySelector(".contenedor-peliculas");
+        getMovies(container, selectList);
+    })
 }

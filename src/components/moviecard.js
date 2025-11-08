@@ -1,4 +1,4 @@
-function cardPpal(movie, container){
+export function cardPpal(movie){
     const containerCard = document.createElement("div");
     containerCard.className = "container-card";
 
@@ -6,7 +6,7 @@ function cardPpal(movie, container){
     containerInformation.className = "container-information";
 
     const imgCard = document.createElement("img");
-    imgCard.setAttribute("src", )
+    imgCard.setAttribute("src", `https://image.tmdb.org/t/p/w500${movie.poster_path}` )
 
 
     const titleCard = document.createElement("h1");
@@ -15,18 +15,19 @@ function cardPpal(movie, container){
 
     const ratingAndDate = document.createElement("p")
     ratingAndDate.className = "rating-date"
-    ratingAndDate.textContent = `Rating: ${data.vote_average} Date: ${data.release_date}`
+    ratingAndDate.textContent = `Rating: ${movie.vote_average} Date: ${movie.release_date}`
 
     const overview = document.createElement("p");
     overview.className = "overview"
-    overview.textContent = `${data.overview}`
+    overview.textContent = `${movie.overview}`
 
 
-    container.appendChild(containerCard);
     containerInformation.appendChild(imgCard);
     containerInformation.appendChild(titleCard);
     containerInformation.appendChild(overview);
     containerCard.appendChild(containerInformation);
+    
+
 
     return containerCard;
 

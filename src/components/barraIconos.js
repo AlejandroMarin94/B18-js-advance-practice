@@ -1,4 +1,4 @@
-import { select } from "../functions/select";
+import { select } from "../functions/select.js";
 
 export function barraIconos(container) {
   const contenedorIconos = document.createElement("div");
