@@ -25,11 +25,11 @@ export function barraIconos(container) {
     "/grid-layout.svg"
   );
 
-  const contenedorSelect = select()
+  
   
 
   contenedorIconosSec.appendChild(contenedorTipovisualizacion);
-  contenedorIconosSec.appendChild(contenedorSelect);
+  contenedorIconosSec.appendChild(select());
   contenedorIconos.appendChild(contenedorIconosSec)
   contenedorTipovisualizacion.appendChild(iconoFiltroGrid);
   contenedorTipovisualizacion.appendChild(iconoFiltroLista);

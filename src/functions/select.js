@@ -1,5 +1,6 @@
 import { moviesList } from "../api/apiconfig.js";
 import { getMovies } from "../api/apifetch.js";
+import { createSelectEventistener } from "./evenlistener.js";
 
 export function select(){
  
@@ -17,6 +18,8 @@ export function select(){
     selectOption.textContent =option[0]
     selectBusqueda.appendChild(selectOption)
   })
+    selectBusqueda.value ="now_playing";
+
   
   createSelectEventistener(selectBusqueda);
     console.log("probando");
@@ -28,10 +31,3 @@ export function select(){
 
   
 
-function createSelectEventistener(select){
-    select.addEventListener("change", (e)=>{
-        const selectList = e.target.value;
-        const container = document.querySelector(".contenedor-peliculas");
-        getMovies(container, selectList);
-    })
-}

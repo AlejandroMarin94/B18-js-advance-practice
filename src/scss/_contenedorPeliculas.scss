@@ -1,0 +1,19 @@
+.contenedor-peliculas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    
+}
+
+.imgCard{
+    border-radius: 20px;
+}
+
+.overview {
+  display: -webkit-box;          /* define un contenedor flexible */
+  -webkit-line-clamp: 4;         /* número máximo de líneas */
+  -webkit-box-orient: vertical;  /* orientación vertical */
+  overflow: hidden;              /* oculta el resto del texto */
+  text-overflow: ellipsis;       /* añade los "..." */
+}
