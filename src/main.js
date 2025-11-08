@@ -12,7 +12,7 @@ document.querySelector('#app').innerHTML = `
 const firsView = firstView()
 
 const containerPeliculas = document.createElement("div");
-containerPeliculas.className = "contenedor-peliculas";
+containerPeliculas.className = "contenedor-peliculas-grid";
 
 barraIconos(document.querySelector("#app"))
 

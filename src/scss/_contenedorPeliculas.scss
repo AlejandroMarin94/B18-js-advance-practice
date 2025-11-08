@@ -1,19 +1,44 @@
-.contenedor-peliculas{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.contenedor-peliculas-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
-    
+  @extend .mt-5;
 }
 
-.imgCard{
-    border-radius: 20px;
+.container-card {
+  width: 280px;
+  margin: auto;
+}
+
+.imgCard {
+  border-radius: 20px;
+  height: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgCard:hover {
+  cursor: pointer;
+  transform: perspective(600px) rotateY(15deg) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .overview {
-  display: -webkit-box;          /* define un contenedor flexible */
-  -webkit-line-clamp: 4;         /* número máximo de líneas */
-  -webkit-box-orient: vertical;  /* orientación vertical */
-  overflow: hidden;              /* oculta el resto del texto */
-  text-overflow: ellipsis;       /* añade los "..." */
+  display: -webkit-box; /* define un contenedor flexible */
+  -webkit-line-clamp: 4; /* número máximo de líneas */
+  -webkit-box-orient: vertical; /* orientación vertical */
+  overflow: hidden; /* oculta el resto del texto */
+  text-overflow: ellipsis; /* añade los "..." */
+  margin: 6px 0 30px;
+  line-height: 1.5;
+}
+
+.title-card {
+  @extend .my-2;
+
+  font-size: $font-size-base * 1.25;
+  font-weight: $font-weight-bold;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

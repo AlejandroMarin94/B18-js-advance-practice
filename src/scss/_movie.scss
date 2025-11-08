@@ -1,12 +1,6 @@
-.movie-toolbar-wrapper {
-  @extend .py-2;
-  background-color: #eee;
-  border-bottom: 1px solid #ddd;
-}
 
-#movie-list-container {
-  @extend .mt-5;
-}
+
+
 
 .movie-grid,
 .movie-list,
@@ -23,16 +17,6 @@
     }
   }
 
-  .movie-title {
-    @extend .my-2;
-
-    font-size: $font-size-base * 1.25;
-    font-weight: $font-weight-bold;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 
   .movie-overview {
     margin: 6px 0 30px;

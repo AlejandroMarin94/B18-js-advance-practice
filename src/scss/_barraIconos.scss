@@ -1,32 +1,37 @@
-.contenedor-iconos{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    
-    background-color: grey;
-    height: 3.125rem;
-  
+
+
+// Contenedor donde está select e iconos para mostrar pelis en lista o grid
+.contenedor-iconos,
+.contenedor-iconosSec{
+   
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @extend .py-2;
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  height: 3.125rem;
+  justify-content: center; 
+
    
 }
+
 .contenedor-iconosSec{
-    display: flex;
-    flex-direction: row;
+    
     justify-content: space-between;
     align-items: center;
-    background-color: grey;
-    height: 3.125rem;
+   
     width: 100%;
     max-width: 1280px;
-    position: sticky;
+    
 
     
    
 }
-
+// Contenedor que tiene iconos de visualizacion de las listas
 .tipo-visualizacion{
     display: flex;
- 
+    padding-left: 3rem;
     gap: 1.80rem;
 
 }
