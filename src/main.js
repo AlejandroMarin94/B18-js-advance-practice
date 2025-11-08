@@ -9,7 +9,6 @@ import './scss/style.scss'
 
 document.querySelector('#app').innerHTML = `
 `
-const firsView = firstView()
 
 const containerPeliculas = document.createElement("div");
 containerPeliculas.className = "contenedor-peliculas-grid";
