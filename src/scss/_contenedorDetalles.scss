@@ -1,0 +1,96 @@
+
+// imagen portada
+.img-detail{ 
+   border-radius: 15px;
+   margin-top: 6.5rem;
+   justify-content: center;
+   align-items: center;
+
+}
+
+
+.title-detail{
+    margin-left: 1.5rem;
+}
+
+.description-detail{
+    margin-left: 1.5rem;
+}
+
+
+
+.detailCard-Conex{
+  display: flex;
+  flex-direction: row;
+  
+
+  
+
+}
+
+
+
+.cast-section,
+.crew-section {
+  display: flex; /* Coloca las tarjetas en fila horizontal */
+  flex-direction: row; /* Asegura que se alineen de izquierda a derecha */
+  
+  gap: 1rem; /* Espacio entre cada tarjeta */
+  overflow-x: auto; /* Activa el scroll horizontal si hay muchas tarjetas */
+  overflow-y: hidden;
+
+
+
+  margin-left: 7rem;
+
+  width: 900px; /* Espacio interno alrededor de la galería */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  scroll-behavior: smooth; /* Hace que el desplazamiento sea suave */
+}
+
+.cast-section::-webkit-scrollbar,
+.crew-section::-webkit-scrollbar {
+  height: 1rem; /* Altura de la barra horizontal */
+}
+
+.cast-section::-webkit-scrollbar-track,
+.crew-section::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Color de fondo de la pista (la base de la barra) */
+  border-radius: 1rem;
+}
+
+.cast-section::-webkit-scrollbar-thumb,
+.crew-section::-webkit-scrollbar-thumb {
+  background-color: #0077cc; /* Color del "pulgar" que se arrastra */
+  border-radius: 1rem;
+  border: 2px solid #e0e0e0; /* Borde para que se vea más integrado */
+}
+
+
+
+.actor-card,
+.crew-card {
+
+ flex: 0 0 auto;              /* Evita que se estiren o encojan */
+  width: 150px;                /* Tamaño fijo para cada tarjeta */
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+
+}
+
+/* Imágenes adaptadas */
+.actor-img,
+.crew-img {
+  height: 100%;
+  max-height: 160px;          /* 🔒 Ajusta al alto del contenedor */
+  width: auto;
+  object-fit: contain;
+  border-radius: 3rem;
+}
+

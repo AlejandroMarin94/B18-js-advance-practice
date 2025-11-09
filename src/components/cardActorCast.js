@@ -41,7 +41,7 @@ const gallery = document.createElement("div");
     crewCard.className= "crew-card";
 
     const crewImg = document.createElement("img");
-    crewImg.className ="crew-image"
+    crewImg.className ="crew-img"
     crewImg.setAttribute("src",`https://image.tmdb.org/t/p/w185${person.profile_path}` )
 
     const crewName = document.createElement("p");
@@ -53,12 +53,10 @@ const gallery = document.createElement("div");
     crewCard.appendChild(crewName);
     crewSection.appendChild(crewCard);
   })
-  gallery.appendChild(castSection)
   
-  gallery.appendChild(crewSection)
 
 
 
   
-  return gallery;
+  return {castSection, crewSection};
 }

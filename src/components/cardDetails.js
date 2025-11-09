@@ -8,14 +8,38 @@ export function createDetailsCard(movie, castArray, castCrew) {
   
   detailCard.classList.add("tarjeta-detalles", "detail-card");
 
-  const detailCardSec = document.createElement("div");
-  detailCardSec.className = "detail-cardsec";
+  const detailCardConex = document.createElement("div");
+  detailCardConex. className ="detailCard-Conex";
 
-  const detailCardTerc = document.createElement("div");
-  detailCardTerc.className = "detail-cardterc";
+  const detailCardImage = document.createElement("div");
+  detailCardImage.className = "detailCard-image";
 
-  const detailCardCuarto = document.createElement("div");
-  detailCardCuarto.className = "detail-cuarto";
+  const detailCardImageYcontent = document.createElement("div");
+  detailCardImageYcontent.className = "detail-imageAndContent";
+
+  const detailCardTitle = document.createElement("div");
+ detailCardTitle.className = "detail-CardTitle";
+
+
+
+  
+
+  const detailCardOver = document.createElement("div");
+  detailCardOver.className = "detail-CardOver";
+
+  const detailCardRatingAndDate = document.createElement("div");
+  detailCardRatingAndDate.className = "detail-RatingAndDate";
+
+  const detailCardCast = document.createElement("div");
+  detailCardCast.className = "detail-Cast";
+
+  const detailCardCrew = document.createElement("div");
+  detailCardCrew.className = "detail-Crew";
+
+
+
+
+
   
 
   const imgDetail = document.createElement("img");
@@ -24,27 +48,39 @@ export function createDetailsCard(movie, castArray, castCrew) {
     "src",
     `https://image.tmdb.org/t/p/w300${movie.poster_path}`);
 
+    detailCardImage.appendChild(imgDetail);
+
   
 
   const titleDetail = document.createElement("h1");
   titleDetail.className = "title-detail";
   titleDetail.textContent = movie.title;
+  detailCardTitle.appendChild(titleDetail);
 
   const descriptionDetail = document.createElement("p");
   descriptionDetail.className = "description-detail";
   descriptionDetail.textContent = movie.overview;
+  detailCardOver.appendChild(descriptionDetail)
 
-  const cast = createActorsGallery(castArray,castCrew);
+  const { castSection, crewSection } = createActorsGallery(castArray, castCrew);
+  detailCardCast.appendChild(castSection);
+  detailCardCrew.appendChild(crewSection);
   
-  detailCardCuarto.appendChild(cast);
+  detailCard.appendChild(detailCardConex);
+  detailCardConex.appendChild(detailCardImage);
+  detailCardConex.appendChild(detailCardImageYcontent);
+  detailCardImageYcontent.appendChild(detailCardTitle);
+  detailCardImageYcontent.appendChild(detailCardRatingAndDate);
+  detailCardImageYcontent.appendChild(detailCardOver);
+  detailCardImageYcontent.appendChild(detailCardCast);
+  detailCardImageYcontent.appendChild(detailCardCrew);
 
-  detailCard.appendChild(imgDetail);
-  detailCardTerc.appendChild(titleDetail);
-  detailCardTerc.appendChild(descriptionDetail);
+  
 
-  detailCard.appendChild(detailCardSec);
-  detailCardSec.appendChild(detailCardTerc);
-  detailCardSec.appendChild(detailCardCuarto);
+  
+
+
+
 
   return detailCard;
 }
