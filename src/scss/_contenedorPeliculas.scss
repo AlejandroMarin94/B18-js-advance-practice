@@ -1,5 +1,5 @@
 
-
+// Propiedades comunes para la visualizacion en grid y en lista
 .contenedor-peliculas.grid-view,
 .contenedor-peliculas.list-view {
   display: grid;
@@ -47,7 +47,7 @@
 }
 }
 
-
+// Propiedades cambiadas para la visualizacion en lista
 .contenedor-peliculas.list-view {
   display: flex;
   flex-direction: column;
