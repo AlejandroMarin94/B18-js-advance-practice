@@ -12,7 +12,24 @@ export async function getMovies(container, datalist) {
     const data = await response.json();
 
     showmovies(data.results, container);
+    
   } catch(error) {
     console.log("Error", error);
   }
+}
+
+
+export async function getCast(movieId) {
+  try{
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=ae7be434369d2443fe4989e702fb311e`);
+
+  const data = await response.json();
+  return{ 
+    cast: data.cast, // esto es un array de actores
+    crew: data.crew // array equipo tecnico
+}
+    
+
+} catch(error){"Error al obtener el reparto", error.message}
 }

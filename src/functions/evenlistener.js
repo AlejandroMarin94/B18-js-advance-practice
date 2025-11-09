@@ -1,24 +1,37 @@
+import { getCast, getMovies } from "../api/apifetch.js";
+import { createActorsGallery } from "../components/cardActorCast.js";
+import { createDetailsCard } from "../components/cardDetails.js";
 
-import { getMovies } from "../api/apifetch.js";
-
-
-export function createSelectEventistener(select){
-    select.addEventListener("change", (lista)=>{
-        const selectList = lista.target.value;  
-        const container = document.querySelector(".contenedor-peliculas");
-        getMovies(container, selectList);
-    })
+export function createSelectEventistener(select) {
+  select.addEventListener("change", (lista) => {
+    const selectList = lista.target.value;
+    const container = document.querySelector(".contenedor-peliculas");
+    getMovies(container, selectList);
+  });
 }
 
+export function firstView() {
+  console.log("ejecutando");
 
-export function firstView(){
+  const container = document.querySelector(".contenedor-peliculas");
+  if (container) {
+    getMovies(container, "now_playing");
+  } else {
+    console.error("No se encontró el contenedor de películas");
+  }
+}
 
-    console.log("ejecutando");
-    
-    const container = document.querySelector(".contenedor-peliculas")
-    if(container){
-    getMovies(container, "now_playing")
+export function uploadDetails(img, movie) {
+  img.addEventListener("click", async () => {
+    const movieId = img.id;
+    console.log("Cargando detalles de la pelicula con id: ", movieId);
 
-    } else{
-        console.error("No se encontró el contenedor de películas");
-    }}
+    document.body.innerHTML = "";
+
+    const { cast, crew } = await getCast(movieId);
+
+    const detailCard = createDetailsCard(movie, cast, crew);
+
+    document.body.appendChild(detailCard);
+  });
+}

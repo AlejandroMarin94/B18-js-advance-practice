@@ -1,4 +1,5 @@
 import { barraIconos } from "./components/barraIconos.js";
+import { createDetailsCard } from "./components/cardDetails.js";
 import { firstView } from "./functions/evenlistener.js";
 import "./scss/style.scss";
 
@@ -15,6 +16,10 @@ import "./scss/style.scss";
 
   app.appendChild(barra);
   app.appendChild(containerPeliculas);
+
+  const cardsSecondary = document.createElement("div");
+  app.appendChild(cardsSecondary);
+  
 
   firstView();
 

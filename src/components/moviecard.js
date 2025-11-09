@@ -1,3 +1,5 @@
+import { uploadDetails } from "../functions/evenlistener";
+
 export function cardPpal(movie) {
   const containerCard = document.createElement("div");
   containerCard.className = "container-card";
@@ -11,6 +13,8 @@ export function cardPpal(movie) {
     "src",
     `https://image.tmdb.org/t/p/w500${movie.poster_path}`
   );
+  imgCard.id = movie.id;
+  uploadDetails(imgCard,movie);
 
   const titleCard = document.createElement("h1");
   titleCard.className = "title-card";
