@@ -1,3 +1,4 @@
+import { cambioVista } from "../functions/cambio_Vista.js";
 import { select } from "../functions/select.js";
 
 export function barraIconos(container) {
@@ -7,35 +8,26 @@ export function barraIconos(container) {
   const contenedorIconosSec = document.createElement("div");
   contenedorIconosSec.className = "contenedor-iconosSec";
 
-
-
   const contenedorTipovisualizacion = document.createElement("div");
-  contenedorTipovisualizacion.className ="tipo-visualizacion"
+  contenedorTipovisualizacion.className = "tipo-visualizacion";
+
   const iconoFiltroLista = document.createElement("img");
-  iconoFiltroLista.className = "filtro-lista";
-  iconoFiltroLista.setAttribute(
-    "src",
-    "/list-layout.svg"
-  );
+  iconoFiltroLista.classList.add("filtro-lista");
+  iconoFiltroLista.setAttribute("src", "/list-layout.svg");
 
   const iconoFiltroGrid = document.createElement("img");
-  iconoFiltroGrid.className = "filtro-grid";
-  iconoFiltroGrid.setAttribute(
-    "src",
-    "/grid-layout.svg"
-  );
+  iconoFiltroGrid.classList.add("filtro-grid");
 
-  
-  
+  iconoFiltroGrid.setAttribute("src", "/grid-layout.svg");
+
+  cambioVista(container, iconoFiltroGrid, "grid-view", "list-view");
+  cambioVista(container, iconoFiltroLista, "list-view", "grid-view");
 
   contenedorIconosSec.appendChild(contenedorTipovisualizacion);
   contenedorIconosSec.appendChild(select());
-  contenedorIconos.appendChild(contenedorIconosSec)
+  contenedorIconos.appendChild(contenedorIconosSec);
   contenedorTipovisualizacion.appendChild(iconoFiltroGrid);
   contenedorTipovisualizacion.appendChild(iconoFiltroLista);
 
-  container.appendChild(contenedorIconos)
-
   return contenedorIconos;
-
 }

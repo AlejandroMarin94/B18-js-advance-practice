@@ -1,12 +1,14 @@
-.contenedor-peliculas-grid{
+
+
+.contenedor-peliculas.grid-view,
+.contenedor-peliculas.list-view {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
   @extend .mt-5;
-}
-
+  
 .container-card {
-  width: 280px;
+  width: 280px; 
   margin: auto;
 }
 
@@ -33,7 +35,7 @@
 }
 
 .title-card {
-  @extend .my-2;
+  @extend .my-4;
 
   font-size: $font-size-base * 1.25;
   font-weight: $font-weight-bold;
@@ -41,4 +43,21 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  
+}
+}
+
+
+.contenedor-peliculas.list-view {
+  display: flex;
+  flex-direction: column;
+  .container-card {
+  width: 280px;
+  margin-left: 10rem;
+
+}
+  
+
+ 
+
 }

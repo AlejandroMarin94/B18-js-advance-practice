@@ -36,3 +36,9 @@
 
 }
 
+.contenedor-iconos{
+  position: sticky;
+  top: 72px; /* se pega justo debajo de la navbar, damos esos px porque es lo que mide la navbar */
+  z-index: 999;
+}
+
