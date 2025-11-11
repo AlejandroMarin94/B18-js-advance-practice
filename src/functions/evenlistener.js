@@ -27,6 +27,11 @@ export function uploadDetails(img, movie) {
     console.log("Cargando detalles de la pelicula con id: ", movieId);
 
     document.body.innerHTML = "";
+    document.body.classList.add("detalle-pelicula")
+    document.body.style.setProperty(
+      "--fondo-pelicula",
+      `url(https://image.tmdb.org/t/p/original${movie.poster_path})`
+    );
 
     const { cast, crew } = await getCast(movieId);
 

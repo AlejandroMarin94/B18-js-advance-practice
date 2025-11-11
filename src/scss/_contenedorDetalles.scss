@@ -2,19 +2,29 @@
 // imagen portada
 .img-detail{ 
    border-radius: 15px;
-   margin-top: 6.5rem;
+   
    justify-content: center;
    align-items: center;
 
+}
+.detail-card{
+  margin-left: 6rem;
 }
 
 
 .title-detail{
     margin-left: 1.5rem;
+    color: white;
+    
+
+
 }
 
 .description-detail{
     margin-left: 1.5rem;
+    color: white;
+    font-size: x-large;
+
 }
 
 
@@ -81,6 +91,7 @@
   text-align: center;
   padding: 0.5rem;
   box-sizing: border-box;
+  color:#e0e0e0
 
 }
 
@@ -94,3 +105,34 @@
   border-radius: 3rem;
 }
 
+body.detalle-pelicula {
+  background-image: var(--fondo-pelicula);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black; // opcional si no usas imagen
+}
+
+.castText,
+.crewText
+{
+  color: #e0e0e0;
+  
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  
+
+}
+body.detalle-pelicula{
+  margin:0;
+}
+
+
+.containerBarra{
+  background-color: gray;
+  margin-left: 0;
+}
+
+.body-details{
+  margin:0;
+}

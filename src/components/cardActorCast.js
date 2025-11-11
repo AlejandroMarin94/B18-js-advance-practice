@@ -6,7 +6,6 @@ const gallery = document.createElement("div");
   castSection.className = "cast-section";
 
   const castTitle = document.createElement("h2");
-  castTitle.textContent = "Actores";
   castSection.appendChild(castTitle);
 
   castArray.forEach(actor=>{
@@ -31,7 +30,7 @@ const gallery = document.createElement("div");
   crewSection.className = "crew-section";
 
   const crewtitle = document.createElement("h2");
-  crewtitle.textContent ="Equipo Ténico";
+  
   crewSection.appendChild(crewtitle);
 
   crewArray.forEach(person=>{

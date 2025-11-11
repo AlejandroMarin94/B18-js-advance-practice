@@ -26,11 +26,11 @@
 }
 
 .overview {
-  display: -webkit-box; /* define un contenedor flexible */
-  -webkit-line-clamp: 4; /* número máximo de líneas */
-  -webkit-box-orient: vertical; /* orientación vertical */
-  overflow: hidden; /* oculta el resto del texto */
-  text-overflow: ellipsis; /* añade los "..." */
+  display: -webkit-box; 
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
   margin: 6px 0 30px;
   line-height: 1.5;
 }
@@ -55,6 +55,7 @@
   .container-card {
   width: 280px;
   margin-left: 10rem;
+  
 
 }
   
