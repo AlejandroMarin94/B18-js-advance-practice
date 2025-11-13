@@ -1,7 +1,7 @@
 import { barraIconosBack } from "./barraIconosBack.js";
 import { createActorsGallery } from "./cardActorCast.js";
 
-export function createDetailsCard(movie, castArray, castCrew) {
+export function createDetailsCard(movie, castArray, castCrew,containerHero) {
   const body = document.body;
 
   const containerBarra = document.createElement("div");
@@ -11,11 +11,11 @@ export function createDetailsCard(movie, castArray, castCrew) {
   detailCard.setAttribute("id", `details-${movie.id}`);
   detailCard.classList.add("tarjeta-detalles", "detail-card");
 
-  const barra = barraIconosBack();
+  const barra = barraIconosBack(containerHero);
   barra.className = "barraBack";
 
   containerBarra.appendChild(barra);
-  body.appendChild(containerBarra);
+  detailCard.appendChild(containerBarra);
 
   const detailCardConex = document.createElement("div");
   detailCardConex.className = "detailCard-Conex";

@@ -9,6 +9,7 @@ const gallery = document.createElement("div");
   castSection.appendChild(castTitle);
 
   castArray.forEach(actor=>{
+    if(!actor.profile_path) return;
     const actorCard = document.createElement("div");
     actorCard.className = "actor-card";
 
@@ -18,7 +19,7 @@ const gallery = document.createElement("div");
 
     const actorName = document.createElement("p");
     actorName.className = "actor-name";
-    actorName.textContent = `${actor.name} como ${actor.character}`;
+    actorName.innerHTML = `${actor.name} <br>como<br>  ${actor.character}`;
 
     actorCard.appendChild(actorImg);
     actorCard.appendChild(actorName);
@@ -45,7 +46,7 @@ const gallery = document.createElement("div");
 
     const crewName = document.createElement("p");
     crewName.className ="crew-name";
-    crewName.textContent = `${person.name} → ${person.job}`
+    crewName.innerHTML = `${person.name} <br> ${person.job}`
 
 
     crewCard.appendChild(crewImg);

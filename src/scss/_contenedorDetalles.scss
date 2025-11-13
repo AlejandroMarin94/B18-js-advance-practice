@@ -1,55 +1,44 @@
-
 // imagen portada
-.img-detail{ 
-   border-radius: 15px;
-   
-   justify-content: center;
-   align-items: center;
+.img-detail {
+  border-radius: 15px;
 
-}
-.detail-card{
-  margin-left: 6rem;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.title-detail{
-    margin-left: 1.5rem;
-    color: white;
-    
-
-
+.detail-card {
+  background-image: var(--fondo-pelicula);
+  background-size: cover; /* Ajusta la imagen al viewport */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita repeticiones */
+  min-height: 100vh;
 }
 
-.description-detail{
-    margin-left: 1.5rem;
-    color: white;
-    font-size: x-large;
-
+.title-detail {
+  margin-left: 1.5rem;
+  color: white;
+  max-width: 900px;
 }
 
+.description-detail {
+  margin-left: 1.5rem;
+  color: white;
+  font-size: x-large;
+}
 
-
-.detailCard-Conex{
+.detailCard-Conex {
   display: flex;
   flex-direction: row;
-  
-
-  
-
 }
-
-
 
 .cast-section,
 .crew-section {
   display: flex; /* Coloca las tarjetas en fila horizontal */
   flex-direction: row; /* Asegura que se alineen de izquierda a derecha */
-  
-  gap: 1rem; /* Espacio entre cada tarjeta */
+
+   /* Espacio entre cada tarjeta */
   overflow-x: auto; /* Activa el scroll horizontal si hay muchas tarjetas */
   overflow-y: hidden;
-
-
 
   margin-left: 7rem;
 
@@ -76,13 +65,10 @@
   border: 2px solid #e0e0e0; /* Borde para que se vea más integrado */
 }
 
-
-
 .actor-card,
 .crew-card {
-
- flex: 0 0 auto;              /* Evita que se estiren o encojan */
-  width: 150px;                /* Tamaño fijo para cada tarjeta */
+  flex: 0 0 auto; /* Evita que se estiren o encojan */
+  width: auto; /* Tamaño fijo para cada tarjeta */
   max-height: 250px;
   display: flex;
   flex-direction: column;
@@ -91,48 +77,70 @@
   text-align: center;
   padding: 0.5rem;
   box-sizing: border-box;
-  color:#e0e0e0
-
+  color: #e0e0e0;
 }
 
 /* Imágenes adaptadas */
 .actor-img,
 .crew-img {
   height: 100%;
-  max-height: 160px;          /* 🔒 Ajusta al alto del contenedor */
+  max-height: 160px; /* 🔒 Ajusta al alto del contenedor */
   width: auto;
   object-fit: contain;
   border-radius: 3rem;
 }
 
-body.detalle-pelicula {
-  background-image: var(--fondo-pelicula);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: black; // opcional si no usas imagen
-}
-
 .castText,
-.crewText
-{
+.crewText {
   color: #e0e0e0;
-  
+
   writing-mode: vertical-lr;
   text-orientation: upright;
-  
-
-}
-body.detalle-pelicula{
-  margin:0;
 }
 
-
-.containerBarra{
-  background-color: gray;
+.containerBarra {
+  display: flex;
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
   margin-left: 0;
+  height: 50px;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.body-details{
-  margin:0;
+.body-details {
+  margin: 0;
+}
+
+.details-view {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.barraDiv {
+  height: 50rem;
+  background-color: aqua;
+}
+
+.barraBack {
+  display: flex;
+  margin-left: 6rem;
+}
+.icono_volver {
+  display: flex;
+  align-items: center;
+  margin-left: 6rem;
+}
+
+.detail-CardOver{
+    max-width: 900px;
+
 }

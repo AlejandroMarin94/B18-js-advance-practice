@@ -1,6 +1,8 @@
 import { getCast, getMovies } from "../api/apifetch.js";
 import { createActorsGallery } from "../components/cardActorCast.js";
 import { createDetailsCard } from "../components/cardDetails.js";
+import { barraIconosBack } from "../components/barraIconosBack.js";
+import { mostrarDetalles } from "./mostrarDetalles.js";
 
 export function createSelectEventistener(select) {
   select.addEventListener("change", (lista) => {
@@ -24,10 +26,10 @@ export function firstView() {
 export function uploadDetails(img, movie) {
   img.addEventListener("click", async () => {
     const movieId = img.id;
+    const containerPeliculas = document.querySelector(".contenedor-peliculas");
     console.log("Cargando detalles de la pelicula con id: ", movieId);
 
-    document.body.innerHTML = "";
-    document.body.classList.add("detalle-pelicula")
+    document.body.classList.add("detalle-pelicula");
     document.body.style.setProperty(
       "--fondo-pelicula",
       `url(https://image.tmdb.org/t/p/original${movie.poster_path})`
@@ -35,8 +37,8 @@ export function uploadDetails(img, movie) {
 
     const { cast, crew } = await getCast(movieId);
 
-    const detailCard = createDetailsCard(movie, cast, crew);
-
-    document.body.appendChild(detailCard);
+    // 👇 aquí se monta todo el detalle
+    mostrarDetalles(containerPeliculas, movie, cast, crew);
   });
 }
+  
