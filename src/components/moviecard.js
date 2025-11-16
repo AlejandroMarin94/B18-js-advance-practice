@@ -16,6 +16,9 @@ export function cardPpal(movie) {
   imgCard.id = movie.id;
   uploadDetails(imgCard,movie);
 
+  const textnoImage = document.createElement("div");
+  textnoImage.className= "textNoImage";
+
   const titleCard = document.createElement("h1");
   titleCard.className = "title-card";
   titleCard.textContent = movie.title;
@@ -30,9 +33,10 @@ export function cardPpal(movie) {
   overview.textContent = `${movie.overview}`;
 
   containerInformation.appendChild(imgCard);
-  containerInformation.appendChild(titleCard);
-  containerInformation.appendChild(ratingAndDate);
-  containerInformation.appendChild(overview);
+  containerInformation.appendChild(textnoImage);
+  textnoImage.appendChild(titleCard);
+  textnoImage.appendChild(ratingAndDate);
+  textnoImage.appendChild(overview);
   containerCard.appendChild(containerInformation);
 
   return containerCard;

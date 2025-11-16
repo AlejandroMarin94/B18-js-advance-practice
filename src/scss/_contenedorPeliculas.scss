@@ -1,35 +1,26 @@
-.contenedor-peliculas.grid-view,
-.contenedor-peliculas.list-view {
+.contenedor-peliculas.grid-view {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
   @extend .mt-5;
 
   .container-card {
-    width: 280px;
+    width: 300px;
     margin: auto;
   }
 
   .imgCard {
-    border-radius: 20px;
-    height: 400px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px; //
+    height: 400px; //
+    transition: transform 0.3s ease, box-shadow 0.3s ease; ///
+    object-fit: cover;
+    width: 300px;
   }
 
   .imgCard:hover {
-    cursor: pointer;
-    transform: perspective(600px) rotateY(15deg) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  }
-
-  .overview {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 6px 0 30px;
-    line-height: 1.5;
+    cursor: pointer; ///
+    transform: perspective(600px) rotateY(15deg) scale(1.05); //
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); ///
   }
 
   .title-card {
@@ -44,17 +35,76 @@
   }
 }
 
+.overview {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 6px 0 30px;
+  line-height: 1.5;
+}
+
 .contenedor-peliculas.list-view {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   .container-card {
     width: 280px;
     margin-left: 10rem;
+    display: flex;
+    flex-direction: row;
   }
-}
-.containerHero {
-  display: flex;
-  flex-direction: column;
+  .imgCard {
+    border-radius: 20px; //
+    height: 400px; //
+    transition: transform 0.3s ease, box-shadow 0.3s ease; ///
+    object-fit: cover;
+    width: 300px;
+  }
+
+  .imgCard:hover {
+    cursor: pointer; ///
+    transform: perspective(600px) rotateY(15deg) scale(1.05); //
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); ///
+  }
+  .container-information {
+    display: flex;
+    flex-direction: row;
+  }
+  .title-card {
+    font-size: 2.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .rating-date {
+    font-size: 1.5rem;
+  }
+
+  .overview {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 6px 0 30px;
+    font-size: 1rem;
+    width: 70%;
+  }
+
+  .textNoImage {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 1280px;
+  }
 }
 
 footer.py-3.mt-4.bg-dark.text-white {
@@ -70,9 +120,7 @@ footer.py-3.mt-4.bg-dark.text-white {
 }
 
 .detail-CardTitle,
-.detail-CardOver{
-margin-left: 6rem;
-max-width: 80%;
+.detail-CardOver {
+  margin-left: 6rem;
+  max-width: 80%;
 }
-
-
