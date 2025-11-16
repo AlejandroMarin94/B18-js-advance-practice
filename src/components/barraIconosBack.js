@@ -18,7 +18,7 @@ export function barraIconosBack(containerPeliculas) {
       detailsView.innerHTML = "";
     }
 
-    // 👇 Reactivar el containerHero entero
+    //Reactivar el containerHero entero
     const containerHero = document.querySelector(".containerHero");
     if (containerHero) {
       containerHero.classList.remove("hidden");

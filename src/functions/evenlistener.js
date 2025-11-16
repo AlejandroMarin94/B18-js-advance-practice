@@ -37,7 +37,7 @@ export function uploadDetails(img, movie) {
 
     const { cast, crew } = await getCast(movieId);
 
-    // 👇 aquí se monta todo el detalle
+    
     mostrarDetalles(containerPeliculas, movie, cast, crew);
   });
 }

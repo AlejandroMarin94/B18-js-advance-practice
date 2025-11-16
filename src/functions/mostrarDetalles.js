@@ -13,12 +13,12 @@ export function mostrarDetalles(container, movie, cast, crew) {
     detailsView.className = "details-view";
 
 
-  // 👇 Insertar justo después del containerHero
+ 
     const containerHero = document.querySelector(".containerHero");
     containerHero.insertAdjacentElement("afterend", detailsView);
   }
 
-  // 👇 Ocultar el containerHero entero
+  
   const containerHero = document.querySelector(".containerHero");
   if (containerHero) {
     containerHero.classList.add("hidden");
