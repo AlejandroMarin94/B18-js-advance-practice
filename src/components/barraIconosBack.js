@@ -11,20 +11,20 @@ export function barraIconosBack(containerPeliculas) {
   iconoVolver.addEventListener("click", () => {
     console.log("quiero volver atras");
 
-    // Ocultar/eliminar el detailsView
+    
     const detailsView = document.querySelector(".details-view");
     if (detailsView) {
       detailsView.classList.add("hidden");
       detailsView.innerHTML = "";
     }
 
-    //Reactivar el containerHero entero
+  
     const containerHero = document.querySelector(".containerHero");
     if (containerHero) {
       containerHero.classList.remove("hidden");
     }
 
-    // Quitar fondo detalle
+    
     document.body.classList.remove("detalle-pelicula");
     document.body.style.removeProperty("--fondo-pelicula");
   });

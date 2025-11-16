@@ -1,9 +1,5 @@
-
-
-// Contenedor donde está select e iconos para mostrar pelis en lista o grid
 .contenedor-iconos,
-.contenedor-iconosSec{
-   
+.contenedor-iconosSec {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,34 +7,23 @@
   background-color: #eee;
   border-bottom: 1px solid #ddd;
   height: 3.125rem;
-  justify-content: center; 
-
-   
+  justify-content: center;
 }
 
-.contenedor-iconosSec{
-    
-    justify-content: space-between;
-    align-items: center;
-   
-    width: 100%;
-    max-width: 1280px;
-    
+.contenedor-iconosSec {
+  justify-content: space-between;
+  align-items: center;
 
-    
-   
+  width: 100%;
+  max-width: 1280px;
 }
-// Contenedor que tiene iconos de visualizacion de las listas
-.tipo-visualizacion{
-    display: flex;
-    padding-left: 3rem;
-    gap: 1.80rem;
-
+.tipo-visualizacion {
+  display: flex;
+  padding-left: 3rem;
+  gap: 1.8rem;
 }
 
-.contenedor-iconos{
+.contenedor-iconos {
   position: sticky;
-  top: 72px; /* se pega justo debajo de la navbar, damos esos px porque es lo que mide la navbar */
   z-index: 999;
 }
-

@@ -26,8 +26,8 @@ export async function getCast(movieId) {
 
   const data = await response.json();
   return{ 
-    cast: data.cast, // esto es un array de actores
-    crew: data.crew // array equipo tecnico
+    cast: data.cast, 
+    crew: data.crew 
 }
     
 

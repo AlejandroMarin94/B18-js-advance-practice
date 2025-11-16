@@ -6,7 +6,7 @@ export function mostrarDetalles(container, movie, cast, crew) {
   const listView = container.querySelector(".list-view");
   const gridView = container.querySelector(".grid-view");
 
-  // Buscar o crear detailsView fuera del contenedor de películas
+  
   let detailsView = document.querySelector(".details-view");
   if (!detailsView) {
     detailsView = document.createElement("div");
